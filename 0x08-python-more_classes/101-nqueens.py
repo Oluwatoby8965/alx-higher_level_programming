@@ -48,7 +48,7 @@ class Chessboard:
 
 
 def solve(size):
-    """Solve the N queens problem."""
+    """Solve the N queens problemm."""
     board = Chessboard(size)
     row = col = 0
     while True:
