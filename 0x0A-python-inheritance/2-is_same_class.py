@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-"""Defines a function that checks if an object
-is exactly an instance of a particular class"""
+"""Module 2-is_same_class.py
+Function check if object is inherted from a class
+"""
 
 
 def is_same_class(obj, a_class):
-    return type(obj) ==
+    """Check is obj is inherted from a_class"""
+    if type(obj) is a_class:
+        return True
+    return False
