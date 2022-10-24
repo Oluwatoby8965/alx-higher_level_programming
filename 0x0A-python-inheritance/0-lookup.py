@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Defines a function that returns attributes and methods of an object"""
+"""Defined a list class with member function that prints a sorted list"""
 
 
-def lookup(obj):
-    return dir(obj)
+class MyList(list):
+    def print_sorted(self):
+        """Prints MyList, sorted"""
+        print(sorted(self))
