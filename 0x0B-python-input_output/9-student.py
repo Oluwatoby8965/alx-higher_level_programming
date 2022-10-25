@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-"""Module 9-student
-a class Student that defines a student
-"""
+"""Student class"""
 
 
 class Student:
-    """Defines a student"""
+    """Student class"""
 
-    def __init__(self, first_name, last_name, age):
-        """Define instance"""
-        self.first_name = first_name
-        self.last_name = last_name
+    def __init__(self, first, last, age):
+        self.first_name = first
+        self.last_name = last
         self.age = age
 
     def to_json(self):
-        """retrieves a dictionary representation"""
-        return self
+        """Returns student's serializable dict elements as a dict"""
+        retdict = {}
+        objdict = self.__dict__
+        for ele in objdict:
+            if type(objdict[ele]) in [list, dict, str, int, bool]:
+                retdict[ele] = objdict[ele]
+        return retdict
