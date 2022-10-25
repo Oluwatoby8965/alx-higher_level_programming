@@ -11,4 +11,4 @@ def class_to_json(obj):
     for key, value in obj.__dict__.items():
         d[key] = value
 
-    return
+    return d
